@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@tailwind utilities;
+
+/* --- Color Design --- */
+
+@theme {
+
+  --color-beige: #F5F1EB;
+  --color-sand: #E8DFD6;
+  --color-accent: #d6a866;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}

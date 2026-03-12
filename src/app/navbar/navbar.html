@@ -1,0 +1,75 @@
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="flex items-center justify-between h-16">
+
+      <!-- LOGO -->
+      <a href="#home" class="text-accent font-semibold text-lg tracking-wide">
+        Gabinet Kosmetologii
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+
+        <a href="#about" class="hover:text-accent transition">
+          O gabinecie
+        </a>
+
+        <a href="#services" class="hover:text-accent transition">
+          Zabiegi
+        </a>
+
+        <a href="#gallery" class="hover:text-accent transition">
+          Galeria
+        </a>
+
+        <a href="#pricing" class="hover:text-accent transition">
+          Cennik
+        </a>
+
+        <a
+          href="#booking"
+          class="bg-accent text-white font-semibold px-4 py-2 rounded-lg hover:opacity-80 transition">
+          Umów wizytę
+        </a>
+
+      </nav>
+
+      <!-- MOBILE BUTTON -->
+      <button
+        (click)="toggleMenu()"
+        class="md:hidden">
+
+        ☰
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+
+  <div *ngIf="menuOpen" class="md:hidden bg-white border-t">
+
+    <div class="flex flex-col p-6 gap-4 text-sm">
+
+      <a (click)="closeMenu()" href="#about">O gabinecie</a>
+      <a (click)="closeMenu()" href="#services">Zabiegi</a>
+      <a (click)="closeMenu()" href="#gallery">Galeria</a>
+      <a (click)="closeMenu()" href="#pricing">Cennik</a>
+
+      <a
+        (click)="closeMenu()"
+        href="#booking"
+        class="bg-black text-white text-center py-3 rounded-lg">
+        Umów wizytę
+      </a>
+
+    </div>
+
+  </div>
+
+</header>

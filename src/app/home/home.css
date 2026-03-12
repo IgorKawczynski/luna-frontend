@@ -1,0 +1,8 @@
+.bg-home-gradient {
+  background: linear-gradient(
+    to bottom,
+    white,
+    var(--color-beige),
+    var(--color-accent)
+  );
+}
