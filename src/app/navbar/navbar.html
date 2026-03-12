@@ -1,17 +1,21 @@
 <header
-  class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+  class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 lobster-regular">
 
   <div class="max-w-6xl mx-auto px-6">
 
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between h-24">
 
       <!-- LOGO -->
-      <a href="#home" class="text-accent font-semibold text-lg tracking-wide">
-        Gabinet Kosmetologii
+      <a href="#home" class="flex items-center" aria-label="Strona główna">
+        <img
+          src="assets/LOGO.png"
+          alt="Logo gabinetu kosmetologii"
+          class="h-32 w-auto object-contain"
+        />
       </a>
 
       <!-- DESKTOP MENU -->
-      <nav class="hidden md:flex items-center gap-8 text-sm">
+      <nav class="hidden md:flex items-center gap-16 text-2xl">
 
         <a href="#about" class="hover:text-accent transition">
           O gabinecie
@@ -31,7 +35,7 @@
 
         <a
           href="#booking"
-          class="bg-accent text-white font-semibold px-4 py-2 rounded-lg hover:opacity-80 transition">
+          class="bg-accent text-white font-semibold px-4 py-2 rounded-4xl hover:opacity-80 transition">
           Umów wizytę
         </a>
 
