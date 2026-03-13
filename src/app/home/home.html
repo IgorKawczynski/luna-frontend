@@ -1,4 +1,15 @@
-<section id="home" class="relative bg-beige min-h-screen flex items-center">
+<!--TODO 1
+1  Hero
+2  O gabinecie
+3  Zabiegi (karty usług)
+4  Galeria efektów
+5  Cennik
+6  Instagram (rolki)
+7  Lokalizacja
+-->
+
+
+<section id="home" class="relative bg-beige min-h-[80vh] flex items-center pt-34 md:pt-24 pb-24">
 
 <!--  GRADIENT WALL -->
   <div class="absolute inset-0 bg-linear-to-b from-white via-beige to-sand"></div>
@@ -29,7 +40,7 @@
       <!-- CTA -->
       <div class="mt-10 w-full">
         <a
-          href="#booking"
+          href="https://booksy.com/pl-pl/158780_secret-of-beauty-clinic_salon-kosmetyczny_4428_nadarzyn"
           class="block bg-accent text-white text-center px-12 py-6 rounded-4xl text-lg font-semibold tracking-wide hover:opacity-90 transition-transform duration-400 transform hover:scale-105">
           Zarezerwuj wizytę
         </a>
@@ -37,17 +48,17 @@
 
       <div class="mt-12 flex justify-between text-sm text-gray-500">
 
-        <div>
+        <div class="stat">
           <p class="text-2xl font-semibold text-black">1200+</p>
           <p>zabiegów</p>
         </div>
 
-        <div>
+        <div class="stat">
           <p class="text-2xl font-semibold text-black">5+</p>
           <p>lat doświadczenia</p>
         </div>
 
-        <div>
+        <div class="stat">
           <p class="text-2xl font-semibold text-black">100%</p>
           <p>indywidualna terapia</p>
         </div>
@@ -56,30 +67,28 @@
 
     </div>
 
-<!--    TODO WRZUCIC NA GITHUBA I COMMITOWAC !!!!!!!!!! MA BYC GIT A NIE !!!!!!!!!-->
-
     <!-- RIGHT IMAGE -->
 
-    <div class="relative max-w-md mx-auto py-12">
+    <div class="relative max-w-md mx-auto md:py-12">
 
       <div class="absolute top-10 -left-10 w-64 h-64 bg-amber-200/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-      <div class="absolute -top-6 -right-8 w-64 h-48 border-t-2 border-r-2 border-accent rounded-tr-3xl"></div>
+      <div class="absolute -top-6 md:top-6 -right-8 w-64 h-48 border-t border-r border-sand rounded-tr-3xl"></div>
 
       <div class="relative">
-        <div class="relative overflow-hidden rounded-3xl shadow-2xl aspect-3/5">
+        <div class="relative overflow-hidden rounded-3xl shadow-2xl aspect-3/5 max-h-[55vh] md:max-h-none">
           <img
             src="assets/cosmetologist-one.jpg"
-            class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+            class="w-full h-full object-cover hero-image transform hover:scale-105 transition-transform duration-700"
             alt="Kosmetolog-zdjęcie"
           />
         </div>
 
-        <div class="absolute -bottom-6 -left-6 bg-white shadow-2xl rounded-2xl p-5 w-52 border-l-4 border-amber-500">
+        <div class="absolute -bottom-6 -left-2 md:-left-6 bg-white shadow-2xl rounded-2xl p-5 w-52 border-l-4 border-amber-500">
           <p class="text-xs uppercase tracking-widest text-amber-600 font-bold mb-1">
             Ekspert Beauty
           </p>
-          <p class="text-gray-500 text-sm">Sylwia</p>
-          <p class="font-serif text-xl font-bold text-gray-800">Ślubowska</p>
+          <p class="text-gray-500 text-sm expert-name">Sylwia</p>
+          <p class="font-serif text-xl font-bold text-gray-800 expert-surname">Ślubowska</p>
         </div>
       </div>
 

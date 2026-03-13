@@ -1,1 +1,69 @@
-<p>services works!</p>
+<section id="services" class="py-28 bg-white">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-20">
+
+      <p class="uppercase tracking-widest text-sm text-gray-500">
+        Oferta
+      </p>
+
+      <h2 class="mt-4 text-4xl md:text-5xl font-semibold">
+        Zabiegi kosmetologiczne
+      </h2>
+
+      <p class="mt-6 text-gray-600 text-lg">
+        Nowoczesne terapie skóry dopasowane indywidualnie do potrzeb
+        Twojej cery oraz problemów dermatologicznych.
+      </p>
+
+    </div>
+
+
+    <!-- SERVICES GRID -->
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+      @for (service of services; track service.title) {
+
+        <div
+          class="group bg-beige rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+
+          <!-- ICON -->
+          <div
+            [ngClass]="{
+              'w-36 h-15': service.icon === faStar,
+              'w-14 h-14': service.icon !== faStar
+            }"
+            class="flex items-center justify-center rounded-xl bg-accent/10 text-accent mb-6"
+          >
+            <fa-icon [icon]="service.icon" class="text-accent text-lg"></fa-icon>
+            @if (service.icon === faStar) {
+              <div class="ml-1">BESTSELLER</div>
+            }
+          </div>
+
+          <!-- TITLE -->
+          <h3 class="text-xl font-semibold mb-2">
+            {{ service.title }}
+          </h3>
+
+          <!-- PRICE -->
+          <p class="text-accent font-bold text-lg mb-3">
+            {{ service.price }}
+          </p>
+
+          <!-- DESCRIPTION -->
+          <p class="text-gray-600 leading-relaxed">
+            {{ service.description }}
+          </p>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

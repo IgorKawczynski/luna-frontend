@@ -1,9 +1,36 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+@Pipe({ name: 'safeUrl' })
+export class SafeUrlPipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) {}
+  transform(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
+  imports: [
+    SafeUrlPipe
+  ],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
-export class Gallery {}
+export class Gallery implements OnInit {
+
+  reels: string[] = [
+    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+  ];
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+}

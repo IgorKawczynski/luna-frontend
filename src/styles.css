@@ -20,7 +20,98 @@ html {
 /* --- Fonts --- */
 
 .lobster-regular {
-  font-family: "Footlight MT Light", cursive;
+  font-family: "Georgia", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
+
+/* --- ANIMATIONS --- */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroImage {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+/* --- CLASS STYLES --- */
+.expert-name {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.expert-surname {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-image {
+  animation: heroImage 1.2s ease-out forwards;
+}
+
+.stat {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.stat:nth-child(1){animation-delay:0.4s;}
+.stat:nth-child(2){animation-delay:0.6s;}
+.stat:nth-child(3){animation-delay:0.8s;}
+
+.animate-logo-reveal {
+  animation: logoReveal 1s ease-out forwards;
+}
+
+.animate-shine {
+  animation: shine 0.8s ease-in-out;
+}
+
+

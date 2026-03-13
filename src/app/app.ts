@@ -4,14 +4,13 @@ import {Navbar} from './navbar/navbar';
 import {About} from './about/about';
 import {Services} from './services/services';
 import {Gallery} from './gallery/gallery';
-import {Pricing} from './pricing/pricing';
-import {Booking} from './booking/booking';
 import {Footer} from './footer/footer';
 import {Home} from './home/home';
+import {Localization} from './localization/localization';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, About, Services, Gallery, Pricing, Booking, Footer, Home],
+  imports: [RouterOutlet, Navbar, About, Services, Gallery, Footer, Home, Localization],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

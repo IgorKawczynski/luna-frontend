@@ -6,16 +6,16 @@
     <div class="flex items-center justify-between h-24">
 
       <!-- LOGO -->
-      <a href="#home" class="flex items-center" aria-label="Strona główna">
+      <a href="#home" class="flex items-center tracking-tight animate-logo-reveal" aria-label="Strona główna">
         <img
           src="assets/LOGO.png"
           alt="Logo gabinetu kosmetologii"
-          class="h-32 w-auto object-contain"
+          class="h-32 w-auto object-contain transition-all duration-200 ease-in-out hover:drop-shadow-xl"
         />
       </a>
 
       <!-- DESKTOP MENU -->
-      <nav class="hidden md:flex items-center gap-16 text-2xl">
+      <nav class="hidden md:flex items-center gap-16 text-l">
 
         <a href="#about" class="hover:text-accent transition">
           O gabinecie
@@ -29,25 +29,22 @@
           Galeria
         </a>
 
-        <a href="#pricing" class="hover:text-accent transition">
-          Cennik
+        <a href="#localization" class="hover:text-accent transition">
+          Lokalizacja
         </a>
 
         <a
-          href="#booking"
+          href="https://booksy.com/pl-pl/158780_secret-of-beauty-clinic_salon-kosmetyczny_4428_nadarzyn"
           class="bg-accent text-white font-semibold px-4 py-2 rounded-4xl hover:opacity-80 transition">
           Umów wizytę
         </a>
 
       </nav>
 
-      <!-- MOBILE BUTTON -->
-      <button
-        (click)="toggleMenu()"
-        class="md:hidden">
-
-        ☰
-
+      <button (click)="toggleMenu()" class="md:hidden text-amber-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
       </button>
 
     </div>
@@ -55,25 +52,25 @@
   </div>
 
   <!-- MOBILE MENU -->
-
-  <div *ngIf="menuOpen" class="md:hidden bg-white border-t">
-
-    <div class="flex flex-col p-6 gap-4 text-sm">
-
-      <a (click)="closeMenu()" href="#about">O gabinecie</a>
-      <a (click)="closeMenu()" href="#services">Zabiegi</a>
-      <a (click)="closeMenu()" href="#gallery">Galeria</a>
-      <a (click)="closeMenu()" href="#pricing">Cennik</a>
-
-      <a
-        (click)="closeMenu()"
-        href="#booking"
-        class="bg-black text-white text-center py-3 rounded-lg">
-        Umów wizytę
-      </a>
-
+  @if (menuOpen) {
+    <div class="md:hidden bg-white/95 backdrop-blur-xl border-t border-amber-50">
+      <div class="flex flex-col p-8 gap-6 text-center">
+        <a (click)="closeMenu()" href="#about"
+           class="font-['Montserrat'] uppercase tracking-widest text-sm text-gray-700">O gabinecie</a>
+        <a (click)="closeMenu()" href="#services"
+           class="font-['Montserrat'] uppercase tracking-widest text-sm text-gray-700">Zabiegi</a>
+        <a (click)="closeMenu()" href="#gallery"
+           class="font-['Montserrat'] uppercase tracking-widest text-sm text-gray-700">Galeria</a>
+        <a (click)="closeMenu()" href="#localization"
+           class="font-['Montserrat'] uppercase tracking-widest text-sm text-gray-700">Cennik</a>
+        <a
+          (click)="closeMenu()"
+          href="#localization"
+          class="font-['Montserrat'] uppercase tracking-widest bg-accent text-white py-4 rounded-full font-bold">
+          Umów wizytę
+        </a>
+      </div>
     </div>
-
-  </div>
+  }
 
 </header>
