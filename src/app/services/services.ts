@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import {NgClass, NgIf} from '@angular/common';
-import { faSun, faDroplet, faSpa, faLeaf, faStar } from '@fortawesome/free-solid-svg-icons';
+import {Component} from '@angular/core';
+import {NgClass} from '@angular/common';
+import {faDroplet, faLeaf, faSpa, faStar, faSun} from '@fortawesome/free-solid-svg-icons';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-services',
   imports: [
-    NgIf,
     FaIconComponent,
     NgClass
   ],
