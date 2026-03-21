@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { Localization } from './localization';
+import {Localization} from './localization';
 
 describe('Localization', () => {
   let component: Localization;

@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import { Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import {Component, OnInit, Pipe, PipeTransform} from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {

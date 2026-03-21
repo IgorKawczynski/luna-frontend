@@ -1,5 +1,4 @@
 import {AfterViewInit, Component, signal} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import {Navbar} from './navbar/navbar';
 import {About} from './about/about';
 import {Services} from './services/services';
@@ -10,7 +9,7 @@ import {Localization} from './localization/localization';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, About, Services, Gallery, Footer, Home, Localization],
+  imports: [Navbar, About, Services, Gallery, Footer, Home, Localization],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
