@@ -21,11 +21,10 @@ export class SafeUrlPipe implements PipeTransform {
 export class Gallery implements OnInit {
 
   reels: string[] = [
-    'https://www.instagram.com/p/DKrheQ1NM32/embed',
-    'https://www.instagram.com/p/DKrheQ1NM32/embed',
-    'https://www.instagram.com/p/DKrheQ1NM32/embed',
-    'https://www.instagram.com/p/DKrheQ1NM32/embed',
-    'https://www.instagram.com/p/DKrheQ1NM32/embed',
+    'https://www.instagram.com/p/DV8X6tyDbqF/embed',
+    'https://www.instagram.com/p/DV0TTrAjUD1/embed',
+    'https://www.instagram.com/p/DVtLH9GiAw9/embed',
+    'https://www.instagram.com/p/DVvWsTFDUQh/embed',
     'https://www.instagram.com/p/DKrheQ1NM32/embed',
   ];
 

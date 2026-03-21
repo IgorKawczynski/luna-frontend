@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import {AfterViewInit, Component, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Navbar} from './navbar/navbar';
 import {About} from './about/about';
@@ -14,6 +14,21 @@ import {Localization} from './localization/localization';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('luna-frontend');
+export class App implements AfterViewInit {
+
+  protected readonly title = signal('Luna - Gabinet Kosmetologiczny');
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  }
+
+
 }

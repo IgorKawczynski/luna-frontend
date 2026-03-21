@@ -2,7 +2,7 @@
   <div class="max-w-6xl mx-auto px-6">
 
     <!-- HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
+    <div class="text-center max-w-2xl mx-auto mb-8 lg:mb-16">
       <p class="uppercase tracking-widest text-sm text-gray-500">Instagram</p>
       <h2 class="mt-4 text-4xl md:text-5xl font-semibold">Video Blog - Bądź na bieżąco</h2>
       <p class="mt-6 text-gray-600 text-lg">
@@ -11,14 +11,14 @@
     </div>
 
     <!-- KARUZELA / REELS -->
-    <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-2">
-      @for(reel of reels; track reel) {
-        <div class="flex-shrink-0 w-70 h-140 rounded-3xl shadow-lg overflow-hidden snap-start relative">
+    <div class="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+      @for (reel of reels; track reel) {
+        <div class="shrink-0 w-full sm:w-75 md:w-75 lg:w-87.5 h-160 rounded-3xl shadow-lg overflow-hidden snap-start relative">
           <iframe
             [src]="reel | safeUrl"
             class="w-full h-full"
-            frameborder="0"
             allowfullscreen
+            scrolling="no"
           ></iframe>
         </div>
       }
