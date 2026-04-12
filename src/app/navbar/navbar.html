@@ -60,6 +60,15 @@
     <div class="md:hidden bg-white/95 backdrop-blur-xl border-t border-amber-50">
       <div class="flex flex-col p-8 gap-6 text-center">
 
+        @if (this.currentSectionId !== 'home') {
+          <a
+            (click)="closeMenu()"
+            href="https://app.wellmify.com/pl/szrensk/luna-kosmetologia"
+            class="tracking-widest bg-accent text-white py-4 rounded-full font-bold">
+            Umów wizytę
+          </a>
+        }
+
         <a (click)="closeMenu()" href="#about"
            class="tracking-widest text-sm text-gray-700">O gabinecie</a>
         <a (click)="closeMenu()" href="#services"
@@ -70,15 +79,6 @@
            class="tracking-widest text-sm text-gray-700">Lokalizacja</a>
         <a (click)="closeMenu()" href="#footer"
            class="tracking-widest text-sm text-gray-700">Kontakt</a>
-
-        @if (this.currentSectionId !== 'home') {
-          <a
-            (click)="closeMenu()"
-            href="https://app.wellmify.com/pl/szrensk/luna-kosmetologia"
-            class="tracking-widest bg-accent text-white py-4 rounded-full font-bold">
-            Umów wizytę
-          </a>
-        }
 
       </div>
     </div>
