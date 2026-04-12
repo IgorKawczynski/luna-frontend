@@ -13,7 +13,8 @@
     <!-- KARUZELA / REELS -->
     <div class="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
       @for (reel of reels; track reel) {
-        <div class="shrink-0 w-full sm:w-75 md:w-75 lg:w-87.5 h-160 rounded-3xl shadow-lg overflow-hidden snap-start relativep-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+        <div
+          class="shrink-0 w-full sm:w-75 md:w-75 lg:w-87.5 h-160 rounded-3xl shadow-lg overflow-hidden snap-start relativep-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
           <iframe
             [src]="reel | safeUrl"
             class="w-full h-full"
@@ -25,4 +26,9 @@
     </div>
 
   </div>
+
+  <p class="text-center mt-6 text-sm text-gray-400 mb-4 sm:hidden">
+    Przesuń w prawo →
+  </p>
+
 </section>
